@@ -1,0 +1,44 @@
+---
+title: 
+author:
+date: 
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,fig.width=8, fig.height=4)
+```
+<br />
+
+#### Differencing Series to Pass the ADF Test 
+
+```{r, message=FALSE, warning=FALSE}
+TotalVehicleSales <- ts(fred$series.observations(series_id = 'TOTALNSA')[,c('date','value')][,-1], 
+                        start=c(1976,1), frequency = 12)
+AnalyzeSeries(diff(TotalVehicleSales, differences=1))
+```
+```{r, message=FALSE, warning=FALSE}
+RetailSales <- ts(fred$series.observations(series_id = 'RETAILSMNSA')[,c('date','value')][,-1], 
+                        start=c(1992,1), frequency = 12)
+AnalyzeSeries(diff(RetailSales, differences=2))
+```
+
+```{r, message=FALSE, warning=FALSE}
+ChinaCPI <- ts(fred$series.observations(series_id = 'CHNCPIALLQINMEI')[,c('date','value')][,-1], 
+                  start=c(1993,1), frequency = 4)
+AnalyzeSeries(diff(ChinaCPI, differences=4))
+```
+```{r, message=FALSE, warning=FALSE}
+USGDP <- ts(fred$series.observations(series_id = 'GDPCA')[,c('date','value')][,-1], 
+               start=c(1929), frequency = 1)
+AnalyzeSeries(diff(USGDP, differences=7))
+```
+```{r, message=FALSE, warning=FALSE}
+USGDPpc <- ts(fred$series.observations(series_id = 'A191RL1A225NBEA')[,c('date','value')][,-1], 
+            start=c(1930), frequency = 1)
+AnalyzeSeries(diff(USGDPpc, differences=1))
+```
+
+
+
+ rmarkdown::render("HW6.Rmd")

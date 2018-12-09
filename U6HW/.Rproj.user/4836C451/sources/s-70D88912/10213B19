@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1543787102453.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "10213B19",
+    "lastKnownWriteTime" : 1543901078,
+    "last_content_update" : 1543901078,
+    "path" : "~/Documents/11Forecast/Unit3/U3Interactive/U3IAFunctions.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "164,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
